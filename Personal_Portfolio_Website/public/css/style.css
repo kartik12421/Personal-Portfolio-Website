@@ -1,0 +1,213 @@
+:root {
+  --primary-color-dark: #00ffff; /* Cyan */
+  --background-color-dark: #121212;
+  --text-color-dark: #ffffff;
+  --card-bg-dark: #1e1e1e;
+
+  --primary-color-light: #008b8b; /* Dark Cyan */
+  --text-color-light: #000000;
+  --card-bg-light: #1e1e1e;
+}
+
+
+.social-icons {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color-dark);
+    color: var(--primary-color-dark);
+    margin-right: 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--primary-color-dark);
+    color: var(--background-color-dark);
+    transform: scale(1.1);
+}
+
+.light-mode .social-icon {
+    border: 2px solid var(--primary-color-light);
+    color: var(--primary-color-light);
+}
+
+.light-mode .social-icon:hover {
+    background-color: var(--primary-color-light);
+    color: white;
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 0px; /* Height of the static navbar */
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.container {
+    flex: 1;
+}
+
+
+.dark-mode {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+  min-height: 100vh;
+}
+
+.dark-mode .form-control {
+  background-color: #343a40; /* Darker grey */
+  color: white;
+  border-color: #495057;
+}
+
+.dark-mode .form-control::placeholder {
+  color: #ced4da;
+}
+
+.light-mode {
+  background-color: var(--card-bg-light);
+  color: var(--text-color-light);
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: transparent;
+  border-bottom: 1px solid var(--primary-color-dark);
+  position: static;
+}
+
+.dark-mode .navbar .navbar-brand,
+.dark-mode .navbar .nav-link {
+  color: var(--text-color-dark);
+}
+
+.light-mode .navbar .navbar-brand,
+.light-mode .navbar .nav-link {
+  color: var(--text-color-light);
+}
+
+.light-mode .navbar {
+  border-bottom: 1px solid var(--primary-color-light);
+}
+
+.navbar-brand,
+.nav-link:hover {
+  color: var(--primary-color-dark) !important;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 15px; /* Adjust as needed */
+}
+
+.light-mode .navbar-brand,
+.light-mode .nav-link:hover {
+  color: var(--primary-color-light) !important;
+}
+
+.card {
+  background-color: var(--card-bg-dark);
+  border: 1px solid var(--primary-color-dark);
+  color: var(--text-color-dark);
+  margin-bottom: 20px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 255, 255, 0.4);
+}
+
+.light-mode .card {
+  background-color: var(--card-bg-light);
+  border: 1px solid var(--primary-color-light);
+  color: var(--text-color-light);
+}
+
+.card-title {
+  color: var(--primary-color-dark);
+}
+
+.card-subtitle {
+  color: #ffffff !important; /* Pure white for both dark and light mode */
+}
+
+.experience-years {
+  font-weight: bold;
+  color: var(--primary-color-dark);
+}
+
+.light-mode .experience-years {
+  color: var(--primary-color-light);
+}
+
+.light-mode .card-subtitle {
+  color: #ffffff; /* Pure white for both dark and light mode */
+}
+
+.light-mode .card-title {
+  color: var(--primary-color-light);
+}
+
+
+footer {
+    background-color: #1c1c1c; /* A slightly different shade for the footer in dark mode */
+}
+
+.light-mode footer {
+    background-color: #f8f9fa; /* A standard light footer color */
+}
+.btn-primary {
+  background-color: var(--primary-color-dark);
+  border-color: var(--primary-color-dark);
+  color: black !important;
+}
+
+.btn-primary:hover {
+  background-color: #00e0e0;
+  border-color: #00e0e0;
+}
+
+.light-mode .btn-primary {
+  background-color: var(--primary-color-light);
+  border-color: var(--primary-color-light);
+  color: rgb(0, 0, 0) !important;
+}
+
+.light-mode .btn-primary:hover {
+  background-color: #006666;
+  border-color: #006666;
+}
+
+a {
+  color: var(--primary-color-dark);
+}
+
+.light-mode a {
+  color: var(--primary-color-light);
+}
+
+footer a {
+  color: var(--primary-color-dark) !important;
+}
+
+.light-mode footer a {
+  color: var(--primary-color-light) !important;
+}
